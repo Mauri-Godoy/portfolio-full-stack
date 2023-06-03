@@ -5,7 +5,9 @@ module.exports = {
     colors: {
       'background': '#081E33',
       'primary': '#8C52FF',
-      'white': '#fff'
+      'white': '#fff',
+      'angular': '#de0030',
+      'spring' : '#67aa3c'
     },
   },
   plugins: [],
