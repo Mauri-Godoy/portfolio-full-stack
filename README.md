@@ -1,4 +1,4 @@
-https://portofolio-mauricio-godoy.netlify.app
+https://portfolio-mauricio-godoy.netlify.app
 
 # Portfolio
 
