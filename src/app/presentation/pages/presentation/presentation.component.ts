@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faMapMarkedAlt, faGraduationCap, faBrain, faDatabase, faSchool } from '@fortawesome/free-solid-svg-icons';
 import { faAngular, faJava } from '@fortawesome/free-brands-svg-icons';
 import { translate } from 'src/app/animations/translateAnimation';
+import { async } from 'rxjs';
 
 @Component({
   selector: 'app-presentation',
@@ -20,5 +21,22 @@ export class PresentationComponent {
   faBrain = faBrain;
   faDatabase = faDatabase;
   faSchool = faSchool;
+
+  displayList: boolean[] = []
+  textQuantity: number = 3;
+  intervalTime: number = 500;
+
+  constructor() {
+    this.displayWithInterval()
+  }
+
+  displayWithInterval() {
+    let i = 0;
+
+    const intr = setInterval(() => {
+      this.displayList.push(true);
+      if (++i == this.textQuantity) clearInterval(intr);
+    }, this.intervalTime)
+  }
 }
 
