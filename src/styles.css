@@ -6,3 +6,23 @@
 p {
   @apply text-xl md:text-3xl text-white mb-8 text-justify;
 }
+
+a {
+  @apply text-white;
+}
+
+li {
+  @apply duration-500
+}
+
+.inline-image {
+  @apply md:h-16 inline h-8;
+}
+
+.visibility-sm {
+  @apply inline md:hidden;
+}
+
+.visibility-xl {
+  @apply md:inline hidden;
+}

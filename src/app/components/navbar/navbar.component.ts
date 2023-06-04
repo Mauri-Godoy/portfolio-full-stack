@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faUser, faHome } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -6,11 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class NavbarComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class NavbarComponent {
+  faHome = faHome;
+  faUser = faUser;
 
 }

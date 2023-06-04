@@ -1,6 +1,10 @@
 <ul class="fixed w-screen flex justify-around items-center p-4">
-  <bar-item [redirectUrl]="'home'">Home</bar-item>
-  <bar-item [redirectUrl]="'home/presentation'">Presentation</bar-item>
-  <bar-item>Projects</bar-item>
-  <bar-item>Contact</bar-item>
+  <bar-item [redirectUrl]="'home'"><span class="visibility-xl">Home</span> <fa-icon class="visibility-sm"
+      [icon]="faHome"></fa-icon> </bar-item>
+  <bar-item [redirectUrl]="'home/presentation'"><span class="visibility-xl">Presentation</span> <fa-icon
+      class="visibility-sm" [icon]="faUser"></fa-icon></bar-item>
+  <bar-item><span class="visibility-xl">Projects</span> <fa-icon class="visibility-sm"
+      [icon]="faHome"></fa-icon></bar-item>
+  <bar-item><span class="visibility-xl">Contact</span> <fa-icon class="visibility-sm"
+      [icon]="faHome"></fa-icon></bar-item>
 </ul>
