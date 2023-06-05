@@ -9,13 +9,17 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BarItemComponent } from './components/bar-item/bar-item.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BackgroundElementComponent } from './components/background-element/background-element.component';
+import { BackgroundComponent } from './components/background/background.component';
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
     NavbarComponent,
     BarItemComponent,
-    FooterComponent
+    FooterComponent,
+    BackgroundElementComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,

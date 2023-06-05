@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { faMapMarkedAlt, faGraduationCap, faBrain, faDatabase, faSchool } from '@fortawesome/free-solid-svg-icons';
 import { faAngular, faJava } from '@fortawesome/free-brands-svg-icons';
 import { translate } from 'src/app/animations/translateAnimation';
-import { async } from 'rxjs';
 
 @Component({
   selector: 'app-presentation',

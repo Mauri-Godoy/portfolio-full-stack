@@ -7,15 +7,17 @@
     <fa-icon class="text-secondary" [icon]="faMap"></fa-icon>
   </p>
   <p @enterState *ngIf="displayList[0]">
-    I started programming in secondary school and i studed in the <span class="font-bold text-secondary">
+    I started programming in secondary school and i was a finalist in <img src="../../../../assets/mega.png"
+      class="inline-image">
+  </p>
+  <p @enterState *ngIf="displayList[1]">
+    i 'm a <span class="text-secondary font-bold">self-taught student <fa-icon class="text-secondary"
+        [icon]="faBrain"></fa-icon> </span>, i have
+    various certifications from<img src="../../../../assets/platzi.webp" class="inline-image">and i studed in the
+    <span class="font-bold text-secondary">
       Java <img src="../../../../assets/mindhub.webp" class="inline-image"> Bootcamp <fa-icon class="text-secondary"
         [icon]="faGraduationCap"></fa-icon>
     </span>
-  </p>
-  <p @enterState *ngIf="displayList[1]">
-    i 'm a <span class="text-secondary font-bold">self-taught student</span> , i 'm a <img
-      src="../../../../assets/platzi.webp" class="inline-image"> expert and i have
-    various certifications <fa-icon class="text-secondary" [icon]="faBrain"></fa-icon>
   </p>
   <p @enterState *ngIf="displayList[2]">
     I work in

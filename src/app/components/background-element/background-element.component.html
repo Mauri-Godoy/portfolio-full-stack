@@ -1,0 +1,5 @@
+<div class="h-screen w-screen absolute overflow-hidden -z-10">
+  <img [src]="src" class="relative w-40" *ngIf="show"
+    [@bounce]="{value: state, params: { duration: duration, x: x, y: y, inX: inX, inY: inY}}"
+    (@bounce.done)="onEnd($event)">
+</div>
