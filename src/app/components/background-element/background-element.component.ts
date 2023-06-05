@@ -38,7 +38,7 @@ export class BackgroundElementComponent {
 
     setTimeout(() => {
       this.show = true
-    }, NumberUtils.getRandomInt(.3, 4) * 1000);
+    }, NumberUtils.getRandomInt(3, 60) * 100);
   }
 
   setAnimationParams() {
@@ -46,8 +46,8 @@ export class BackgroundElementComponent {
     this.x = NumberUtils.getRandomInt(0, 100)
     this.inX = NumberUtils.getRandomInt(0, 100)
     this.inY = NumberUtils.getRandomInt(0, 100)
-    this.duration = NumberUtils.getRandomInt(16, 40)
-    this.timeout = NumberUtils.getRandomInt(0, 50) * 100
+    this.duration = NumberUtils.getRandomInt(30, 60)
+    this.timeout = NumberUtils.getRandomInt(3, 1000) * 100
 
     if (this.y > this.x) {
       this.inY = -20
