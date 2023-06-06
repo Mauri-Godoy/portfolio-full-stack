@@ -23,10 +23,8 @@ export class BackgroundElementComponent {
   onEnd(event: { toState: string; }) {
     this.state = 'in';
     if (event.toState === 'in') {
-      setTimeout(() => {
-        this.state = 'out';
-        this.setAnimationParams()
-      }, this.timeout);
+      this.state = 'out';
+      this.setAnimationParams()
     }
   }
 
@@ -39,16 +37,15 @@ export class BackgroundElementComponent {
     this.x = NumberUtils.getRandomInt(0, 100)
     this.inX = NumberUtils.getRandomInt(0, 100)
     this.inY = NumberUtils.getRandomInt(0, 100)
-    this.duration = NumberUtils.getRandomInt(45, 120)
-    this.timeout = NumberUtils.getRandomInt(5, 100) * 100
+    this.duration = NumberUtils.getRandomInt(80, 120)
 
     if (this.y > this.x) {
-      this.inY = -20
-      this.y = 120
+      this.inY = -28
+      this.y = 90
     }
     else {
-      this.inX = -20
-      this.x = 120
+      this.inX = -28
+      this.x = 90
     }
   }
 }

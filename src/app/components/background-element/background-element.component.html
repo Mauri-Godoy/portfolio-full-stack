@@ -1,5 +1,5 @@
 <div class="h-screen w-screen absolute overflow-hidden -z-10">
-  <img [src]="src" class="relative max-w-xs max-h-12 md:max-h-24"
+  <img [src]="src" class="relative h-64"
     [@bounce]="{value: state, params: { duration: duration, x: x, y: y, inX: inX, inY: inY}}"
     (@bounce.done)="onEnd($event)">
 </div>
