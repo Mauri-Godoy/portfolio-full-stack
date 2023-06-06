@@ -21,21 +21,6 @@ export class PresentationComponent {
   faDatabase = faDatabase;
   faSchool = faSchool;
 
-  displayList: boolean[] = []
-  textQuantity: number = 3;
-  intervalTime: number = 500;
-
-  constructor() {
-    this.displayWithInterval()
-  }
-
-  displayWithInterval() {
-    let i = 0;
-
-    const intr = setInterval(() => {
-      this.displayList.push(true);
-      if (++i == this.textQuantity) clearInterval(intr);
-    }, this.intervalTime)
-  }
+  durationList: number[] = [1.4, 1.8, 2.4, 2.8]
 }
 

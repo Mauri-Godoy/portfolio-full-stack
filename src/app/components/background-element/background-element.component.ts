@@ -1,20 +1,17 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { appear } from 'src/app/animations/appearAnimation';
 import { bounce } from 'src/app/animations/bounceAnimation';
 import { NumberUtils } from 'src/app/utils/numberUtils';
 
 @Component({
   selector: 'app-background-element',
   templateUrl: './background-element.component.html',
-  animations: [bounce, appear]
+  animations: [bounce]
 })
 export class BackgroundElementComponent {
 
   @Input() src: string | undefined;
 
   state: string = 'in';
-
-  show: boolean = false;
 
   x: number = 0;
   y: number = 0;
@@ -35,10 +32,6 @@ export class BackgroundElementComponent {
 
   constructor() {
     this.setAnimationParams()
-
-    setTimeout(() => {
-      this.show = true
-    }, NumberUtils.getRandomInt(1, 100) * 100);
   }
 
   setAnimationParams() {
@@ -46,7 +39,7 @@ export class BackgroundElementComponent {
     this.x = NumberUtils.getRandomInt(0, 100)
     this.inX = NumberUtils.getRandomInt(0, 100)
     this.inY = NumberUtils.getRandomInt(0, 100)
-    this.duration = NumberUtils.getRandomInt(30, 60)
+    this.duration = NumberUtils.getRandomInt(45, 120)
     this.timeout = NumberUtils.getRandomInt(5, 100) * 100
 
     if (this.y > this.x) {

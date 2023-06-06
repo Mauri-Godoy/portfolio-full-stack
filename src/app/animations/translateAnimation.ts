@@ -9,10 +9,10 @@ export const translate: AnimationTriggerMetadata =
       })
     ),
     transition(':enter', [
-      animate(700, style({
+      animate('{{duration}}s', style({
         transform: 'translateX(0)',
         opacity: 1
       }))
-    ])
+    ], { params: { duration: 1 } })
   ])
 
