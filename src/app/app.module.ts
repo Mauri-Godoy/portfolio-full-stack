@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BackgroundElementComponent } from './components/background-element/background-element.component';
 import { BackgroundComponent } from './components/background/background.component';
 import { NgOptimizedImage } from '@angular/common';
+import { ProjectsComponent } from './pages/projects/projects.component';
+import { ProjectComponent } from './component/project/project.component';
+import { ContactComponent } from './pages/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,10 @@ import { NgOptimizedImage } from '@angular/common';
     BarItemComponent,
     FooterComponent,
     BackgroundElementComponent,
-    BackgroundComponent],
+    BackgroundComponent,
+    ProjectsComponent,
+    ProjectComponent,
+    ContactComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

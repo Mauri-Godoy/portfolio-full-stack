@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faUser, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faHome, faCode, faAddressBook } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -10,5 +10,7 @@ import { faUser, faHome } from '@fortawesome/free-solid-svg-icons';
 export class NavbarComponent {
   faHome = faHome;
   faUser = faUser;
+  faCode = faCode;
+  faAddressBook = faAddressBook;
 
 }
