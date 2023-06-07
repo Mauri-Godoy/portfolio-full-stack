@@ -11,7 +11,7 @@ export class BackgroundElementComponent {
 
   @Input() src: string | undefined;
 
-  state: string = 'in';
+  state: string | undefined;
 
   x: number = 0;
   y: number = 0;
@@ -30,6 +30,7 @@ export class BackgroundElementComponent {
 
   constructor() {
     this.setAnimationParams()
+    this.state = 'in'
   }
 
   setAnimationParams() {
