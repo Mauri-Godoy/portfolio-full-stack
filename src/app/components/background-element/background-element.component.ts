@@ -10,6 +10,9 @@ import { NumberUtils } from 'src/app/utils/numberUtils';
 export class BackgroundElementComponent {
 
   @Input() src: string | undefined;
+  @Input() minX: number = 0
+  @Input() minY: number = 0
+
 
   state: string | undefined;
 
@@ -28,7 +31,7 @@ export class BackgroundElementComponent {
     }
   }
 
-  constructor() {
+  ngOnInit(): void {
     this.setAnimationParams()
     this.state = 'in'
   }
@@ -36,16 +39,14 @@ export class BackgroundElementComponent {
   setAnimationParams() {
     this.y = NumberUtils.getRandomInt(0, 100)
     this.x = NumberUtils.getRandomInt(0, 100)
-    this.inX = NumberUtils.getRandomInt(0, 100)
-    this.inY = NumberUtils.getRandomInt(0, 100)
-    this.duration = NumberUtils.getRandomInt(80, 120)
+    this.inX = NumberUtils.getRandomInt(this.minX, this.minX + 25)
+    this.inY = NumberUtils.getRandomInt(this.minY, this.minY + 25)
+    this.duration = NumberUtils.getRandomInt(310, 500)
 
     if (this.y > this.x) {
-      this.inY = -28
       this.y = 90
     }
     else {
-      this.inX = -28
       this.x = 90
     }
   }
