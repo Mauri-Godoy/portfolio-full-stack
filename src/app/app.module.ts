@@ -12,9 +12,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BackgroundElementComponent } from './components/background-element/background-element.component';
 import { BackgroundComponent } from './components/background/background.component';
 import { NgOptimizedImage } from '@angular/common';
-import { ProjectsComponent } from './pages/projects/projects.component';
-import { ProjectComponent } from './component/project/project.component';
-import { ContactComponent } from './pages/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,9 +21,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     FooterComponent,
     BackgroundElementComponent,
     BackgroundComponent,
-    ProjectsComponent,
-    ProjectComponent,
-    ContactComponent],
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -35,7 +30,6 @@ import { ContactComponent } from './pages/contact/contact.component';
     NgOptimizedImage,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

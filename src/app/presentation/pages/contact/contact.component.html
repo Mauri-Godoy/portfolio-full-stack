@@ -1,0 +1,6 @@
+<div class="h-screen flex justify-center items-center flex-col">
+  <form *ngIf="form" [formGroup]="form" class="flex flex-col">
+    <input type="text" placeholder="Email" formControlName="email">
+    <button class="btn-primary" (click)="onSubmit()" type="button">Enviar</button>
+  </form>
+</div>

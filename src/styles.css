@@ -26,3 +26,19 @@ li {
 .visibility-xl {
   @apply md:inline hidden;
 }
+
+button {
+  @apply text-white font-bold px-8 py-2 rounded-md uppercase duration-1000;
+}
+
+input {
+  @apply text-white px-4 py-2 bg-none rounded-md border-2 border-primary
+}
+
+.btn-primary {
+  @apply bg-primary hover:bg-secondary;
+}
+
+a, button, input {
+  @apply focus:outline-third
+}
