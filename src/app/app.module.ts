@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BackgroundElementComponent } from './components/background-element/background-element.component';
 import { BackgroundComponent } from './components/background/background.component';
+import { NgOptimizedImage } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +20,13 @@ import { BackgroundComponent } from './components/background/background.componen
     BarItemComponent,
     FooterComponent,
     BackgroundElementComponent,
-    BackgroundComponent
-  ],
+    BackgroundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgOptimizedImage,
   ],
   providers: [],
   bootstrap: [AppComponent]

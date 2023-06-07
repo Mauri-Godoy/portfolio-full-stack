@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { PresentationRoutingModule } from './presentation-routing.module';
 import { PresentationComponent } from './pages/presentation/presentation.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -12,6 +12,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CommonModule,
     PresentationRoutingModule,
     FontAwesomeModule,
+    NgOptimizedImage
   ]
 })
 export class PresentationModule { }

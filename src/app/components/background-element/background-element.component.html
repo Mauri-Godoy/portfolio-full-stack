@@ -1,5 +1,5 @@
-<div class="h-screen w-screen absolute overflow-hidden -z-10">
-  <img [src]="src" class="relative h-64"
+<div class="h-screen w-screen absolute overflow-hidden -z-10" *ngIf="src">
+  <img [ngSrc]="src" class="relative" width="250" height="250"
     [@bounce]="{value: state, params: { duration: duration, x: x, y: y, inX: inX, inY: inY}}"
     (@bounce.done)="onEnd($event)">
 </div>
