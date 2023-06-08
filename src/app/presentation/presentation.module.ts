@@ -7,6 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [PresentationComponent, HomeComponent, ContactComponent, ProjectsComponent],
   imports: [
@@ -15,6 +16,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
     FontAwesomeModule,
     NgOptimizedImage,
     ReactiveFormsModule,
+    SharedModule
   ],
 })
-export class PresentationModule {}
+export class PresentationModule { }

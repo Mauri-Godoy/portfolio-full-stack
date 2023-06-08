@@ -1,6 +1,8 @@
 <div class="h-screen flex justify-center items-center flex-col">
-  <form *ngIf="form" [formGroup]="form" class="flex flex-col">
-    <input type="text" placeholder="Email" formControlName="email">
-    <button class="btn-primary" (click)="onSubmit()" type="button">Enviar</button>
+  <form *ngIf="form" [formGroup]="form" class="flex flex-col gap-6 w-11/12 md:w-1/3">
+    <app-input placeholder="Email" [control]="emailField" type="email"></app-input>
+    <app-input placeholder="Name" [control]="nameField"></app-input>
+    <app-input placeholder="Subject" [control]="subjectField"></app-input>
+    <button class="btn-primary" (click)="onSubmit()" type="button">Send</button>
   </form>
 </div>

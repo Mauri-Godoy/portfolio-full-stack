@@ -9,7 +9,9 @@ module.exports = {
       'angular': '#de0030',
       'spring': '#67aa3c',
       'secondary': '#456BFF',
-      'third': '#8C52FF'
+      'third': '#8C52FF',
+      'transparent': '#ffffff00',
+      'danger': '#FE4B68'
     },
   },
   plugins: [],
