@@ -1,6 +1,22 @@
-<label for="input" class="text-white text-xs" *ngIf="isInvalid"> {{error}}</label>
+<div *ngIf="control" (focusout)="touch()">
 
-<input name="input" *ngIf="control" [type]="type" [placeholder]="placeholder" [(ngModel)]="value"
-  (ngModelChange)="patchValue()" [ngClass]="{
-  'error' : isInvalid
-}">
+  <textarea [maxlength]="maxLength" *ngIf="textArea; else input" [placeholder]="placeholder" [(ngModel)]="value"
+    (ngModelChange)="patchValue()" rows="6" [ngClass]="{
+      'error' : isInvalid
+    }"> </textarea>
+
+  <ng-template #input>
+    <input [maxlength]="maxLength" [type]="type" [placeholder]="placeholder" [(ngModel)]="value"
+      (ngModelChange)="patchValue()" [ngClass]="{
+      'error' : isInvalid
+    }">
+  </ng-template>
+
+
+</div>
+
+<span class="text-danger text-xs duration-1000" [ngClass]="{
+  'opacity-0' : !isInvalid
+}"> {{error}} </span>
+
+<span *ngIf="textArea" class="float-right text-xs text-third"> {{value ? value.length : '0'}} / {{maxLength}}</span>

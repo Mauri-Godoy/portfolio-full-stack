@@ -16,12 +16,14 @@ export class ContactComponent implements OnInit {
     this.form = new FormGroup({
       email: new FormControl(null, [Validators.required, Validators.email]),
       name: new FormControl(null, Validators.required),
-      subject: new FormControl(null, Validators.required),
+      subject: new FormControl(null),
+      message: new FormControl(null, [Validators.required]),
     });
   }
 
   onSubmit() {
-    console.log(this.form?.value);
+    if (this.form?.invalid)
+      this.form.markAllAsTouched()
   }
 
   get emailField(): AbstractControl | any {
@@ -34,5 +36,9 @@ export class ContactComponent implements OnInit {
 
   get subjectField(): AbstractControl | any {
     return this.form?.get('subject')
+  }
+
+  get messageField(): AbstractControl | any {
+    return this.form?.get('message')
   }
 }

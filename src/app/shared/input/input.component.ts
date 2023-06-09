@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { AbstractControl, FormControl, RequiredValidator } from '@angular/forms';
+import { AbstractControl, FormControl, RequiredValidator, ValidationErrors } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -10,7 +10,8 @@ export class InputComponent {
   @Input() placeholder: string = ""
   @Input() type: 'text' | 'email' | 'submit' = 'text';
   @Input() control: AbstractControl = new FormControl();
-
+  @Input() textArea: boolean = false;
+  @Input() maxLength: number = 100;
 
   value: string = this.control.value
 
@@ -20,11 +21,23 @@ export class InputComponent {
   }
 
   get isInvalid(): boolean {
-    console.log(this.error)
-    return this.control.invalid && this.control.dirty
+    return this.control.invalid && this.control.touched
   }
 
   get error() {
-    return this.control.errors && this.control.errors['required'] ? "Campo requerido" : "Email inválido"
+    let error: string = '.'
+
+    const errors: ValidationErrors | null = this.control.errors;
+
+    if (errors) {
+      if (errors['required']) error = 'Required'
+      else if (errors['email']) error = 'Invalid email'
+    }
+
+    return error
+  }
+
+  touch() {
+    this.control.markAsTouched();
   }
 }

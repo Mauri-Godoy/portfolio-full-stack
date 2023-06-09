@@ -3,6 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color: #E845FF;
+  --third-color: #8C52FF;
+  --third-color-transparent: #8c52ff8e;
+}
+
+
 p {
   @apply text-xl md:text-3xl text-white mb-8 text-justify;
 }
@@ -31,7 +38,7 @@ button {
   @apply text-white font-bold px-8 py-2 rounded-md uppercase  w-11/12 mx-auto;
 }
 
-input {
+input, textarea {
   @apply text-white px-4 py-2 bg-none rounded-md border-2 border-third bg-transparent focus:border-secondary focus:bg-secondary w-full
 }
 
@@ -39,7 +46,7 @@ input {
   @apply bg-third hover:bg-secondary;
 }
 
-a, button, input {
+a, button, input, textarea {
   @apply focus:outline-none focus:shadow-third duration-1000
 }
 
@@ -49,4 +56,18 @@ a, button, input {
 
 app-input {
   @apply w-11/12 mx-auto
+}
+
+textarea {
+  resize: none;
+}
+
+textarea::-webkit-scrollbar {
+  width: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: var(--third-color-transparent);
+  border-radius: 5px;
+  padding: 0 5px;
 }

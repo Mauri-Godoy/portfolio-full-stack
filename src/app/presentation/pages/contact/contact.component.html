@@ -1,8 +1,9 @@
 <div class="h-screen flex justify-center items-center flex-col">
-  <form *ngIf="form" [formGroup]="form" class="flex flex-col gap-6 w-11/12 md:w-1/3">
-    <app-input placeholder="Email" [control]="emailField" type="email"></app-input>
+  <form *ngIf="form" [formGroup]="form" class="flex flex-col gap-2 w-11/12 md:w-1/3">
     <app-input placeholder="Name" [control]="nameField"></app-input>
+    <app-input placeholder="Email" [control]="emailField" type="email"></app-input>
     <app-input placeholder="Subject" [control]="subjectField"></app-input>
+    <app-input placeholder="Message" [control]="messageField" [textArea]="true" [maxLength]="500"></app-input>
     <button class="btn-primary" (click)="onSubmit()" type="button">Send</button>
   </form>
 </div>
