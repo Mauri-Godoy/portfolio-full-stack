@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
-
+import { EmailService } from 'src/app/services/email.service';
+import { faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-contact',
-  templateUrl: './contact.component.html',
+  templateUrl: './contact.component.html'
 })
 export class ContactComponent implements OnInit {
   form: FormGroup | undefined;
+  faUser = faUser;
+  faEnvelope = faEnvelope;
+
+  constructor(private emailService: EmailService) { }
 
   ngOnInit(): void {
     this.buildForm();
@@ -14,9 +19,8 @@ export class ContactComponent implements OnInit {
 
   buildForm() {
     this.form = new FormGroup({
-      email: new FormControl(null, [Validators.required, Validators.email]),
+      _replyto: new FormControl(null, [Validators.required, Validators.email]),
       name: new FormControl(null, Validators.required),
-      subject: new FormControl(null),
       message: new FormControl(null, [Validators.required]),
     });
   }
@@ -24,21 +28,23 @@ export class ContactComponent implements OnInit {
   onSubmit() {
     if (this.form?.invalid)
       this.form.markAllAsTouched()
+    else this.emailService.sendEmail(this.form?.value).subscribe(response => {
+      location.href = 'https://mailthis.to/confirm'
+    })
+
   }
 
   get emailField(): AbstractControl | any {
-    return this.form?.get('email')
+    return this.form?.get('_replyto')
   }
 
   get nameField(): AbstractControl | any {
     return this.form?.get('name')
   }
 
-  get subjectField(): AbstractControl | any {
-    return this.form?.get('subject')
-  }
-
   get messageField(): AbstractControl | any {
     return this.form?.get('message')
   }
 }
+
+

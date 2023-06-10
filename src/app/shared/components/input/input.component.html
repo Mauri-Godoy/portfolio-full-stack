@@ -1,4 +1,4 @@
-<div *ngIf="control" (focusout)="touch()">
+<div *ngIf="control" (focusout)="touch()" class="relative" [@appear]="{value: ':enter', params: { duration: duration}}">
 
   <textarea [maxlength]="maxLength" *ngIf="textArea; else input" [placeholder]="placeholder" [(ngModel)]="value"
     (ngModelChange)="patchValue()" rows="6" [ngClass]="{
@@ -11,6 +11,8 @@
       'error' : isInvalid
     }">
   </ng-template>
+
+  <span class="text-third absolute left-0 mt-1.5 ml-3 text-xl"><ng-content></ng-content></span>
 
 
 </div>

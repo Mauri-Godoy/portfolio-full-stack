@@ -35,11 +35,16 @@ li {
 }
 
 button {
-  @apply text-white font-bold px-8 py-2 rounded-md uppercase  w-11/12 mx-auto;
+  @apply text-white font-bold px-8 py-2 rounded-md uppercase  w-full;
+}
+
+app-btn {
+  @apply w-11/12 mx-auto
 }
 
 input, textarea {
-  @apply text-white px-4 py-2 bg-none rounded-md border-2 border-third bg-transparent focus:border-secondary focus:bg-secondary w-full
+  @apply text-white py-2 bg-none rounded-md border-2 border-third bg-transparent
+  focus:border-secondary focus:bg-secondary w-full
 }
 
 .btn-primary {
@@ -60,6 +65,11 @@ app-input {
 
 textarea {
   resize: none;
+  @apply px-4
+}
+
+input {
+ @apply px-9
 }
 
 textarea::-webkit-scrollbar {
@@ -71,3 +81,4 @@ textarea::-webkit-scrollbar-thumb {
   border-radius: 5px;
   padding: 0 5px;
 }
+

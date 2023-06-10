@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { InputComponent } from './input/input.component';
-import { BackgroundElementComponent } from './background-element/background-element.component';
+import { InputComponent } from './components/input/input.component';
+import { BackgroundElementComponent } from './components/background-element/background-element.component';
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from '../app-routing.module';
-import { BarItemComponent } from './bar-item/bar-item.component';
+import { BarItemComponent } from './components/bar-item/bar-item.component';
 import { RouterModule } from '@angular/router';
+import { ProjectComponent } from './components/project/project.component';
+import { BtnComponent } from './components/btn/btn.component';
 
 @NgModule({
   declarations: [
     InputComponent,
     BarItemComponent,
     BackgroundElementComponent,
+    ProjectComponent,
+    BtnComponent,
   ],
   imports: [
     CommonModule,
@@ -19,6 +22,6 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     RouterModule,
   ],
-  exports: [InputComponent, BarItemComponent, BackgroundElementComponent]
+  exports: [InputComponent, BarItemComponent, BackgroundElementComponent, BtnComponent]
 })
 export class SharedModule { }
