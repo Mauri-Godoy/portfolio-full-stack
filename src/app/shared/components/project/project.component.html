@@ -6,7 +6,9 @@
   <img class="relative h-2/4 py-2" [src]="project.image" alt="">
   <p class="text-gray" *ngIf="main">{{project.description}}</p>
   <div class="flex justify-end gap-2 w-full" *ngIf="main">
-    <a class="text-primary duration-1000 hover:text-secondary" href=""><fa-icon [icon]="faGithub"></fa-icon> </a>
-    <a class="text-primary duration-1000 hover:text-secondary" href=""><fa-icon [icon]="faLink"></fa-icon> </a>
+    <a *ngIf="project.gitHubLink" class="text-primary duration-1000 hover:text-secondary" target="_blank"
+      [href]="project.gitHubLink"><fa-icon [icon]="faGithub"></fa-icon> </a>
+    <a *ngIf="project.link" class="text-primary duration-1000 hover:text-secondary" target="_blank"
+      [href]="project.link"><fa-icon [icon]="faLink"></fa-icon> </a>
   </div>
 </div>
