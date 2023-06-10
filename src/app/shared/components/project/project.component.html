@@ -1,1 +1,6 @@
-<p>project works!</p>
+<div *ngIf="project" [ngClass]="{'opacity-80 md:w-40': !main, 'md:w-80': main}"
+  class="border-secondary border-2 rounded-md bg-background mx-2 flex flex-col items-center justify-center">
+  <h3 class="text-center text-white" [ngClass]="{ 'text-5xl' : main, 'text-3xl': !main}">{{project.name}}</h3>
+  <img class="relative" [ngClass]="{ 'w-36 md:w-56' : main, 'w-12 md:w-24': !main}" [src]="project.image" alt="">
+  <p class="text-secondary" *ngIf="main">{{project.description}}</p>
+</div>

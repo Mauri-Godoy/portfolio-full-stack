@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Project",
+    "description": "Project",
+    "image": "../../assets/Capa.png"
+  },
+  {
+    "name": "Project2",
+    "description": "Project2",
+    "image": "../../assets/clumsy.svg"
+  },
+  {
+    "name": "Project3",
+    "description": "Project3",
+    "image": "../../assets/coffee.svg"
+  }
+]

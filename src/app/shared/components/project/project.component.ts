@@ -1,14 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Project } from 'src/app/models/ProjectModel';
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html'
 })
-export class ProjectComponent implements OnInit {
+export class ProjectComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  @Input() project: Project | null = null;
+  @Input() main: boolean = false;
 }

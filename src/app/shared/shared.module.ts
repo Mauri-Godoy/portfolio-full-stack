@@ -22,6 +22,6 @@ import { BtnComponent } from './components/btn/btn.component';
     FormsModule,
     RouterModule,
   ],
-  exports: [InputComponent, BarItemComponent, BackgroundElementComponent, BtnComponent]
+  exports: [InputComponent, BarItemComponent, BackgroundElementComponent, BtnComponent, ProjectComponent]
 })
 export class SharedModule { }

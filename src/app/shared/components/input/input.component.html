@@ -12,7 +12,7 @@
     }">
   </ng-template>
 
-  <span class="text-third absolute left-0 mt-1.5 ml-3 text-xl"><ng-content></ng-content></span>
+  <span class="text-secondary absolute left-0 mt-1.5 ml-3 text-xl"><ng-content></ng-content></span>
 
 
 </div>
@@ -21,4 +21,4 @@
   'opacity-0' : !isInvalid
 }"> {{error}} </span>
 
-<span *ngIf="textArea" class="float-right text-xs text-third"> {{value ? value.length : '0'}} / {{maxLength}}</span>
+<span *ngIf="textArea" class="float-right text-xs text-secondary"> {{value ? value.length : '0'}} / {{maxLength}}</span>

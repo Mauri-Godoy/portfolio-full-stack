@@ -1,1 +1,7 @@
-
+<div class="h-screen flex items-center justify-center">
+  <app-project @enterState [project]="projects[previousIndex]"></app-project>
+  <fa-icon [icon]="faArrowLeft" class="text-white" (click)="showPrevious()"></fa-icon>
+  <app-project @translateR [main]="true" [project]="projects[index]"></app-project>
+  <fa-icon [icon]="faArrowRight" class="text-white" (click)="showNext()"></fa-icon>
+  <app-project @translateT [project]="projects[nextIndex]"></app-project>
+</div>
