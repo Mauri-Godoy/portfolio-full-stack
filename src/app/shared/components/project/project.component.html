@@ -1,6 +1,12 @@
-<div *ngIf="project" [ngClass]="{'opacity-80 md:w-40': !main, 'md:w-80': main}"
-  class="border-secondary border-2 rounded-md bg-background mx-2 flex flex-col items-center justify-center">
-  <h3 class="text-center text-white" [ngClass]="{ 'text-5xl' : main, 'text-3xl': !main}">{{project.name}}</h3>
-  <img class="relative" [ngClass]="{ 'w-36 md:w-56' : main, 'w-12 md:w-24': !main}" [src]="project.image" alt="">
-  <p class="text-secondary" *ngIf="main">{{project.description}}</p>
+<div *ngIf="project" [ngClass]="{'opacity-80 md:w-40 hover:scale-110': !main, 'w-96 hover:scale-150': main}"
+  class="duration-500 rounded-md shadow-md shadow-secondary bg-background mx-8 px-2 flex flex-col items-center justify-center first-letter">
+  <h3 class="text-center text-secondary py-4 uppercase font-bold" [ngClass]="{ 'text-3xl' : main, 'text-md': !main}">
+    {{project.name}}
+  </h3>
+  <img class="relative h-2/4 py-2" [src]="project.image" alt="">
+  <p class="text-gray" *ngIf="main">{{project.description}}</p>
+  <div class="flex justify-end gap-2 w-full" *ngIf="main">
+    <a class="text-primary duration-1000 hover:text-secondary" href=""><fa-icon [icon]="faGithub"></fa-icon> </a>
+    <a class="text-primary duration-1000 hover:text-secondary" href=""><fa-icon [icon]="faLink"></fa-icon> </a>
+  </div>
 </div>

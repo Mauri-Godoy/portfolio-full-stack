@@ -7,6 +7,7 @@ import { BarItemComponent } from './components/bar-item/bar-item.component';
 import { RouterModule } from '@angular/router';
 import { ProjectComponent } from './components/project/project.component';
 import { BtnComponent } from './components/btn/btn.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { BtnComponent } from './components/btn/btn.component';
     NgOptimizedImage,
     FormsModule,
     RouterModule,
+    FontAwesomeModule,
   ],
   exports: [InputComponent, BarItemComponent, BackgroundElementComponent, BtnComponent, ProjectComponent]
 })

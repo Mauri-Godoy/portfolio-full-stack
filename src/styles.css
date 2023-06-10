@@ -11,11 +11,15 @@
 
 
 p {
-  @apply text-xl md:text-3xl text-white mb-8 text-justify;
+  @apply text-gray text-justify;
+}
+
+.p-xl {
+  @apply text-xl md:text-3xl mb-4;
 }
 
 a {
-  @apply text-white;
+  @apply text-gray;
 }
 
 li {
@@ -35,7 +39,7 @@ li {
 }
 
 button {
-  @apply text-white font-bold px-8 py-2 rounded-md uppercase  w-full;
+  @apply text-gray font-bold px-8 py-2 rounded-md uppercase  w-full;
 }
 
 app-btn {
@@ -43,7 +47,7 @@ app-btn {
 }
 
 input, textarea {
-  @apply text-white py-2 bg-none rounded-md border-2 border-secondary bg-transparent
+  @apply text-gray py-2 bg-none rounded-md border-2 border-secondary bg-transparent
   focus:border-third focus:bg-third w-full
 }
 
@@ -80,4 +84,8 @@ textarea::-webkit-scrollbar-thumb {
   background-color: var(--third-color-transparent);
   border-radius: 5px;
   padding: 0 5px;
+}
+
+.btn-icon {
+  @apply text-secondary font-bold text-3xl hover:text-primary duration-700 cursor-pointer
 }
