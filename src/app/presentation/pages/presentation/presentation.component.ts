@@ -22,5 +22,12 @@ export class PresentationComponent {
   faSchool = faSchool;
 
   durationList: number[] = [1.4, 1.8, 2.4, 2.8]
+
+  state: string = "start"
+
+  onEnd(event: { toState: string; }) {
+    if (event.toState === 'start')
+      this.state = 'finish';
+  }
 }
 

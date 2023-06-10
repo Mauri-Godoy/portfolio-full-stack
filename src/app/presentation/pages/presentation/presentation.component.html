@@ -1,17 +1,17 @@
 <div class="w-full bg-background-2">
   <div class="w-11/12 md:w-8/12 mx-auto flex justify-center flex-col md:h-screen pt-20 md:pt-0">
-    <p @enterState class="p-xl">
+    <p [@translate]="{value: state}" (@translate.done)="state = ''" class="p-xl">
       My name is Mauricio Godoy, I 'm twenty one years old and
       I 'm
       from
       <span class="text-secondary font-bold"> San Luis, Argentina </span>
       <fa-icon class="text-secondary" [icon]="faMap"></fa-icon>
     </p>
-    <p [@enterState]="{value: ':enter', params: { duration: durationList[0]}}" class="p-xl">
+    <p [@translate]="{value: state, params: { duration: durationList[0]}}" class="p-xl">
       I started programming in secondary school and I was a finalist in <img src="../../../../assets/mega.png"
         class="inline-image">
     </p>
-    <p [@enterState]="{value: ':enter', params: { duration: durationList[1]}}" class="p-xl">
+    <p [@translate]="{value: state, params: { duration: durationList[1]}}" class="p-xl">
       I 'm a <span class="text-secondary font-bold">self-taught student <fa-icon class="text-secondary"
           [icon]="faBrain"></fa-icon> </span>, I have
       various certifications from<img src="../../../../assets/platzi.webp" class="inline-image">and I studed in the
@@ -20,7 +20,7 @@
           [icon]="faGraduationCap"></fa-icon>
       </span>
     </p>
-    <p [@enterState]="{value: ':enter', params: { duration: durationList[2]}}" class="p-xl">
+    <p [@translate]="{value: state, params: { duration: durationList[2]}}" class="p-xl">
       I work in
       <img src="../../../../assets/stacktrace.png" class="inline-image mx-2">, I 'm a <span
         class="font-bold text-secondary">Fullstack Developer</span> but I have more experience in backend area.

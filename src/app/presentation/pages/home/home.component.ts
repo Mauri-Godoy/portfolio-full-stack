@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { appear } from 'src/app/animations/appearAnimation';
-import { translate } from 'src/app/animations/translateAnimation';
-
-
+import { translate, translateTop } from 'src/app/animations/translateAnimation';
 
 @Component({
   selector: 'app-home',
@@ -10,16 +8,9 @@ import { translate } from 'src/app/animations/translateAnimation';
   styles: [
   ],
   animations: [
-    translate,
+    translateTop,
     appear
   ]
 })
-export class HomeComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-
+export class HomeComponent {
 }

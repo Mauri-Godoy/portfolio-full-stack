@@ -1,14 +1,15 @@
 <div class="h-screen flex items-center justify-center">
   <div (click)="showPrevious()" class="flex items-center justify-center cursor-pointer">
-    <app-project @enterState [project]="projects[previousIndex]"></app-project>
+    <app-project [@translate]="{value: state, params: { x: x}}" [project]="projects[previousIndex]"></app-project>
     <fa-icon [icon]="faArrowLeft" class="btn-icon"></fa-icon>
   </div>
 
-  <app-project @translateT [main]="true" [project]="projects[index]" class="z-50"></app-project>
+  <app-project [@translate]="{value: state, params: { x: x, opacity: 1}}" (@translate.done)="finish()" [main]="true"
+    [project]="projects[index]" class="z-50"></app-project>
 
   <div (click)="showNext()" class="flex items-center justify-center cursor-pointer">
     <fa-icon [icon]="faArrowRight" class="btn-icon"></fa-icon>
-    <app-project @translateR [project]="projects[nextIndex]"></app-project>
+    <app-project [@translate]="{value: state, params: { x: x}}" [project]="projects[nextIndex]"></app-project>
   </div>
 
 </div>
