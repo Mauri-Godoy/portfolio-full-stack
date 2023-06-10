@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { ProjectComponent } from './components/project/project.component';
 import { BtnComponent } from './components/btn/btn.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TooltipComponent } from './components/tooltip/tooltip.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BackgroundElementComponent,
     ProjectComponent,
     BtnComponent,
+    TooltipComponent,
   ],
   imports: [
     CommonModule,

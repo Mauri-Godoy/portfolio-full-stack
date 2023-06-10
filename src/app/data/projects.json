@@ -3,16 +3,55 @@
     "name": "Portfolio",
     "description": "Lorem ipsum dolor sit amet con con  lorem. Lorem ipsum dolor sit amet Lorem ipsum dolor sit",
     "image": "../../assets/portfolio.png",
-    "gitHubLink": "https://github.com/Mauri-Godoy/portfolio-full-stack"
+    "links": [
+      {
+        "link": "https://github.com/Mauri-Godoy/portfolio-full-stack",
+        "gitHub": true,
+        "name": "Repository"
+      }
+    ],
+    "images": [
+      "../../assets/angular.svg",
+      "../../assets/tailwind.svg"
+    ]
   },
   {
-    "name": "Project2",
+    "name": "Mis gastos",
     "description": "Project2",
-    "image": "../../assets/descarga.jpg"
+    "image": "../../assets/mis_gastos.jpg",
+    "links": [
+      {
+        "link": "https://github.com/Mauri-Godoy/Gastos_android",
+        "gitHub": true,
+        "name": "Repository"
+      },
+      {
+        "link": "https://lnkd.in/dee-RvsR",
+        "name": "Play Store"
+      }
+    ],
+    "images": [
+      "../../assets/java.svg",
+      "../../assets/android.svg"
+    ]
   },
   {
-    "name": "Project3",
-    "description": "Project3",
-    "image": "../../assets/coffee.svg"
+    "name": "GO Projects",
+    "description": "Project2",
+    "image": "../../assets/go_web_server.png",
+    "links": [
+      {
+        "link": "https://github.com/Mauri-Godoy/Gastos_android",
+        "gitHub": true,
+        "name": "Repository"
+      },
+      {
+        "link": "https://lnkd.in/dee-RvsR",
+        "name": "Play Store"
+      }
+    ],
+    "images": [
+      "../../assets/go.svg"
+    ]
   }
 ]

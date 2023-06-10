@@ -1,0 +1,6 @@
+<div class="tooltip">
+  <span *ngIf="text" class="tooltiptext w-16" [ngClass]="'bottom-' + bottom">
+    {{text}}
+  </span>
+  <ng-content></ng-content>
+</div>

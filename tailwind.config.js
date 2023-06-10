@@ -12,7 +12,8 @@ module.exports = {
       'third': '#8C52FF',
       'transparent': '#ffffff00',
       'danger': '#FE4B68',
-      'gray' : '#D5D5D5'
+      'gray' : '#D5D5D5',
+      'background-2' : '#081e3386'
     },
   },
   plugins: [],

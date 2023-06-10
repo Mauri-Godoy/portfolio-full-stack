@@ -56,7 +56,7 @@ input, textarea {
 }
 
 a, button, input, textarea {
-  @apply focus:outline-none focus:shadow-secondary duration-1000 bg-background
+  @apply focus:outline-none focus:shadow-secondary duration-1000 bg-background-2
 }
 
 .error {
@@ -88,4 +88,21 @@ textarea::-webkit-scrollbar-thumb {
 
 .btn-icon {
   @apply text-secondary font-bold text-3xl hover:text-primary duration-700 cursor-pointer
+}
+
+
+/* Tooltip container */
+.tooltip {
+  @apply relative inline-block
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  @apply invisible bg-secondary text-gray text-center rounded-sm opacity-0 duration-1000 z-10 absolute
+  text-xs p-0.5;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  @apply visible opacity-80
 }
