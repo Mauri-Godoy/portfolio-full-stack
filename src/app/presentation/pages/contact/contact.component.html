@@ -1,7 +1,7 @@
 <div class="h-screen flex justify-center items-center flex-col">
   <form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit()" class="flex flex-col gap-2 w-11/12 md:w-1/3">
     <app-input placeholder="Name" [control]="nameField"><fa-icon [icon]="faUser"></fa-icon></app-input>
-    <app-input [duration]="2" placeholder="Email" [control]="emailField" type="email"><fa-icon
+    <app-input [duration]="2" placeholder="Email" [control]="mailField" type="email"><fa-icon
         [icon]="faEnvelope"></fa-icon></app-input>
     <app-input [duration]="3" placeholder="Message" [control]="messageField" [textArea]="true"
       [maxLength]="500"></app-input>

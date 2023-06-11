@@ -1,20 +1,20 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { Mail } from '../models/mailDto';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmailService {
 
+
   constructor(private http: HttpClient) { }
 
-  sendEmail(input: FormData) {
+  sendEmail(body: Mail) {
 
-    const url: string = " https://mailthis.to/mauu.godoy01@gmail.com";
+    const url: string = `${environment.URL}/mailsender` ;
 
-    return this.http.post(url, input, {
-      observe: 'response',
-      responseType: 'text'
-    })
+    return this.http.post(url, body)
   }
 }

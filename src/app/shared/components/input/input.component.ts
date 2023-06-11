@@ -13,26 +13,32 @@ export class InputComponent {
 
   @Input() placeholder: string = ""
   @Input() type: 'text' | 'email' | 'submit' = 'text';
-  @Input() control: AbstractControl = new FormControl();
+
+  @Input() set control(value: AbstractControl) {
+    this.formControl = value;
+    this.value = this.formControl.value
+  }
+
   @Input() textArea: boolean = false;
   @Input() maxLength: number = 100;
   @Input() duration: number = .9;
 
-  value: string = this.control.value
+  formControl: AbstractControl = new FormControl();
+  value: string = "";
 
   patchValue() {
-    this.control.markAsDirty()
-    this.control?.patchValue(this.value)
+    this.formControl.markAsDirty()
+    this.formControl?.patchValue(this.value)
   }
 
   get isInvalid(): boolean {
-    return this.control.invalid && this.control.touched
+    return this.formControl.invalid && this.formControl.touched
   }
 
   get error() {
     let error: string = '.'
 
-    const errors: ValidationErrors | null = this.control.errors;
+    const errors: ValidationErrors | null = this.formControl.errors;
 
     if (errors) {
       if (errors['required']) error = 'Required'
@@ -43,6 +49,6 @@ export class InputComponent {
   }
 
   touch() {
-    this.control.markAsTouched();
+    this.formControl.markAsTouched();
   }
 }

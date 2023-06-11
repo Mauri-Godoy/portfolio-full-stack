@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
 
   buildForm() {
     this.form = new FormGroup({
-      _replyto: new FormControl(null, [Validators.required, Validators.email]),
+      mail: new FormControl(null, [Validators.required, Validators.email]),
       name: new FormControl(null, Validators.required),
       message: new FormControl(null, [Validators.required]),
     });
@@ -28,14 +28,12 @@ export class ContactComponent implements OnInit {
   onSubmit() {
     if (this.form?.invalid)
       this.form.markAllAsTouched()
-    else this.emailService.sendEmail(this.form?.value).subscribe(response => {
-      location.href = 'https://mailthis.to/confirm'
-    })
+    else this.emailService.sendEmail(this.form?.value).subscribe(() => this.buildForm());
 
   }
 
-  get emailField(): AbstractControl | any {
-    return this.form?.get('_replyto')
+  get mailField(): AbstractControl | any {
+    return this.form?.get('mail')
   }
 
   get nameField(): AbstractControl | any {

@@ -1,4 +1,4 @@
-<div *ngIf="control" (focusout)="touch()" class="relative" [@appear]="{value: ':enter', params: { duration: duration}}">
+<div *ngIf="formControl" (focusout)="touch()" class="relative" [@appear]="{value: ':enter', params: { duration: duration}}">
 
   <textarea [maxlength]="maxLength" *ngIf="textArea; else input" [placeholder]="placeholder" [(ngModel)]="value"
     (ngModelChange)="patchValue()" rows="6" [ngClass]="{
