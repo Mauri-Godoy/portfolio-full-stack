@@ -1,4 +1,4 @@
-<div *ngIf="project" [ngClass]="{'md:w-40 hover:scale-110': !main, 'w-96 hover:scale-150': main}"
+<div *ngIf="project" [ngClass]="{'md:w-40 hover:scale-110': !main, 'w-60 md:w-96 md:hover:scale-150': main}"
   class="duration-500 rounded-md shadow-md shadow-secondary bg-background-2 mx-8 px-2 flex flex-col items-center justify-center first-letter">
 
   <h3 class="text-center text-secondary py-4 uppercase font-bold" [ngClass]="{ 'text-3xl' : main, 'text-md': !main}">
@@ -8,10 +8,9 @@
   <div class="relative">
     <img class="relative h-2/4 py-2" [src]="project.image" alt="">
 
-    <div *ngIf="!main"
-      class="flex justify-evenly items-center gap-2 w-full absolute bottom-0 h-full bg-background-2">
+    <div *ngIf="!main" class="flex justify-evenly items-center gap-2 w-full absolute bottom-0 h-full bg-background-2">
       <div *ngFor="let item of project.images">
-        <img [src]="item" width="40" height="40" class="rounded-sm">
+        <img [src]="item" width="35" height="35" class="rounded-sm">
       </div>
     </div>
 
@@ -20,7 +19,7 @@
   <p class="text-gray" *ngIf="main">{{project.description}}</p>
 
   <div class="flex justify-end gap-2 w-full" *ngIf="main">
-    <app-tooltip *ngFor="let item of project.links" [text]="item.name" [bottom]="6">
+    <app-tooltip *ngFor="let item of project.links" [text]="item.name">
       <a class="text-primary duration-1000 hover:text-secondary" target="_blank" [href]="item.link"><fa-icon
           [icon]="item.gitHub ? faGithub : faLink"></fa-icon></a>
     </app-tooltip>

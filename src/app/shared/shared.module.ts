@@ -26,6 +26,6 @@ import { TooltipComponent } from './components/tooltip/tooltip.component';
     RouterModule,
     FontAwesomeModule,
   ],
-  exports: [InputComponent, BarItemComponent, BackgroundElementComponent, BtnComponent, ProjectComponent]
+  exports: [InputComponent, BarItemComponent, BackgroundElementComponent, BtnComponent, ProjectComponent, TooltipComponent]
 })
 export class SharedModule { }

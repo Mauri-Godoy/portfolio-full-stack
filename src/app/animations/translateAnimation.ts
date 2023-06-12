@@ -4,9 +4,9 @@ export const translate: AnimationTriggerMetadata =
   trigger('translate', [
     state(
       'start', style({
-        transform: `translateX({{x}}%)` ,
+        transform: `translateX({{x}}%)`,
         opacity: '{{opacity}}'
-      }), { params: { x: '-100', opacity : '0'} }
+      }), { params: { x: '-100', opacity: '0' } }
     ),
     transition('start => *', [
       animate('{{duration}}s', style({
@@ -16,7 +16,7 @@ export const translate: AnimationTriggerMetadata =
     ], { params: { duration: 1 } }),
   ])
 
-  export const translateTop: AnimationTriggerMetadata =
+export const translateTop: AnimationTriggerMetadata =
   trigger('translateT', [
     state(
       'void', style({

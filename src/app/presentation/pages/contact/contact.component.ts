@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 import { EmailService } from 'src/app/services/email.service';
 import { faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html'
@@ -10,11 +11,15 @@ export class ContactComponent implements OnInit {
   form: FormGroup | undefined;
   faUser = faUser;
   faEnvelope = faEnvelope;
+  faWhatsapp = faWhatsapp;
+  faGithub = faGithub;
+  faLinkedIn = faLinkedin;
 
   constructor(private emailService: EmailService) { }
 
   ngOnInit(): void {
     this.buildForm();
+    navigator.clipboard.writeText('Hola mundo')
   }
 
   buildForm() {

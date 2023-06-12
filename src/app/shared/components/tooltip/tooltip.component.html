@@ -1,5 +1,5 @@
-<div class="tooltip">
-  <span *ngIf="text" class="tooltiptext w-16" [ngClass]="'bottom-' + bottom">
+<div class="tooltip" [@translateT]="{value: ':enter', params: { duration: duration}}">
+  <span *ngIf="text" class="tooltiptext w-32 bottom-8 -ml-10">
     {{text}}
   </span>
   <ng-content></ng-content>

@@ -48,7 +48,7 @@ app-btn {
 
 input, textarea {
   @apply text-gray py-2 bg-none rounded-md border-2 border-secondary bg-transparent
-  focus:border-third focus:bg-third w-full
+  focus:border-third focus:bg-third w-full bg-background-2
 }
 
 .btn-primary {
@@ -56,7 +56,7 @@ input, textarea {
 }
 
 a, button, input, textarea {
-  @apply focus:outline-none focus:shadow-secondary duration-1000 bg-background-2
+  @apply focus:outline-none focus:shadow-secondary duration-1000
 }
 
 .error {
@@ -105,4 +105,8 @@ textarea::-webkit-scrollbar-thumb {
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   @apply visible opacity-80
+}
+
+.contact {
+  @apply text-secondary hover:text-primary outline-none hover:shadow-none text-4xl
 }
