@@ -37,7 +37,7 @@
   },
   {
     "name": "GO Projects",
-    "description": "Platzi course projects",
+    "description": "Go projects of Platzi courses",
     "image": "../../assets/go_web_server.png",
     "links": [
       {
@@ -53,6 +53,41 @@
     ],
     "images": [
       "../../assets/go.svg"
+    ]
+  },
+  {
+    "name": "Angular Projects",
+    "description": "Angular projects of Platzi courses",
+    "image": "../../assets/angular_courses.png",
+    "links": [
+      {
+        "link": "https://github.com/Mauri-Godoy/Angular-platzi_store",
+        "gitHub": true,
+        "name": "Angular Platzi store"
+      },
+      {
+        "link": "https://github.com/Mauri-Godoy/Angular-platzi_trello_clone",
+        "gitHub": true,
+        "name": "Angular Platzi trello clone"
+      }
+    ],
+    "images": [
+      "../../assets/angular.svg"
+    ]
+  },
+  {
+    "name": "Homebanking",
+    "description": "First steps with Spring in Mindhub",
+    "image": "../../assets/homebanking.png",
+    "links": [
+      {
+        "link": "https://github.com/Mauri-Godoy/homebanking-mindhub",
+        "gitHub": true,
+        "name": "Repository"
+      }
+    ],
+    "images": [
+      "../../assets/spring.svg"
     ]
   }
 ]

@@ -22,7 +22,7 @@ export class ProjectsComponent {
   index: number = 0;
   nextIndex: number = 1;
 
-  distance: number = 150
+  distance: number = 100
   toLeft: boolean = true
   state: string = 'start'
 

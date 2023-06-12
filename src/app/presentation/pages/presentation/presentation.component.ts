@@ -21,7 +21,7 @@ export class PresentationComponent {
   faDatabase = faDatabase;
   faSchool = faSchool;
 
-  durationList: number[] = [1.4, 1.8, 2.4, 2.8]
+  durationList: number[] = [2, 3, 4, 5]
 
   state: string = "start"
 
