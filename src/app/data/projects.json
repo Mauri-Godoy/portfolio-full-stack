@@ -37,17 +37,18 @@
   },
   {
     "name": "GO Projects",
-    "description": "Project2",
+    "description": "Platzi course projects",
     "image": "../../assets/go_web_server.png",
     "links": [
       {
-        "link": "https://github.com/Mauri-Godoy/Gastos_android",
+        "link": "https://github.com/Mauri-Godoy/go_web_server",
         "gitHub": true,
-        "name": "Repository"
+        "name": "GO web server"
       },
       {
-        "link": "https://lnkd.in/dee-RvsR",
-        "name": "Play Store"
+        "link": "https://github.com/Mauri-Godoy/go_intermediate",
+        "gitHub": true,
+        "name": "GO intermediate"
       }
     ],
     "images": [
