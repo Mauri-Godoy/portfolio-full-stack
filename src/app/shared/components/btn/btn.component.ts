@@ -12,5 +12,6 @@ export class BtnComponent {
 
   @Input() type: 'button' | 'submit' = 'button';
   @Input() duration: number = 1;
+  @Input() disabled: boolean = false;
 
 }

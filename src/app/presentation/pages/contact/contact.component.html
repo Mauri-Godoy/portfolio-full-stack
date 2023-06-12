@@ -1,20 +1,20 @@
 <div class="h-screen flex justify-center items-center flex-col">
 
   <div class="flex justify-evenly w-11/12 md:w-4/12 mb-12">
-    <app-tooltip text="Whatsapp: 2664579830" [duration]="1">
-      <a class="contact" target="_blank" href="https://api.whatsapp.com/send?phone=+5492664579830"><fa-icon
+    <app-tooltip [text]="whatsappNumber" [duration]="1" (click)="copyToClipboard(whatsappNumber)">
+      <a class="contact" target="_blank" [href]="'https://api.whatsapp.com/send?phone=+' + whatsappNumber"><fa-icon
           [icon]="faWhatsapp"></fa-icon></a>
     </app-tooltip>
-    <app-tooltip text="Linkedin: mauri-godoy1" [duration]="1.5">
-      <a class="contact" target="_blank" href="https://www.linkedin.com/in/mauri-godoy1/"><fa-icon
+    <app-tooltip [text]="linkedinUser" [duration]="1.5">
+      <a class="contact" target="_blank" [href]="'https://www.linkedin.com/in/' + linkedinUser"><fa-icon
           [icon]="faLinkedIn"></fa-icon></a>
     </app-tooltip>
-    <app-tooltip text="GitHub: Mauri-Godoy" [duration]="2">
-      <a class="contact" target="_blank" href="https://github.com/Mauri-Godoy"><fa-icon [icon]="faGithub"></fa-icon></a>
+    <app-tooltip [text]="githubUser" [duration]="2">
+      <a class="contact" target="_blank" [href]="'https://github.com/' + githubUser"><fa-icon
+          [icon]="faGithub"></fa-icon></a>
     </app-tooltip>
-    <app-tooltip text="Email: mauu.godoy01 @gmail.com" [duration]="2.5">
-      <a class="contact" target="_blank" href="mailto:mauu.godoy01@gmail.com"><fa-icon
-          [icon]="faEnvelope"></fa-icon></a>
+    <app-tooltip [text]="email" [duration]="2.5" (click)="copyToClipboard(email)">
+      <a class="contact" target="_blank" [href]="'mailto:' + email"><fa-icon [icon]="faEnvelope"></fa-icon></a>
     </app-tooltip>
   </div>
 
@@ -24,6 +24,6 @@
         [icon]="faEnvelope"></fa-icon></app-input>
     <app-input [duration]="3" placeholder="Message" [control]="messageField" [textArea]="true"
       [maxLength]="500"></app-input>
-    <app-btn [duration]="4" type="submit">SEND</app-btn>
+    <app-btn [duration]="4" [disabled]="btnDisabled" type="submit">SEND</app-btn>
   </form>
 </div>

@@ -11,7 +11,9 @@ import { BackgroundComponent } from './components/background/background.componen
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { EmailService } from './services/email.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HandlerErrorInterceptor } from './interceptors/handler-error.interceptor';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,9 +28,18 @@ import { HttpClientModule } from '@angular/common/http';
     FontAwesomeModule,
     SharedModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot({
+      timeOut: 3500,
+      positionClass: 'toast-top-center',
+      preventDuplicates: true,
+    })
   ],
-  providers: [EmailService],
+  providers: [EmailService, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: HandlerErrorInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
